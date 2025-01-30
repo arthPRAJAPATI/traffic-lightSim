@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-01-28T05:24:44" hostname="Arths-MacBook-Air.local" time="0.167">
+<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-01-30T00:11:16" hostname="Arths-MacBook-Air.local" time="4.536">
   <properties/>
-  <testcase name="start" classname="GlobalTests" time="0.167">
-    <failure message="java.lang.AssertionError: Wrong answer in test #7&#10;&#10;There should be created new thread when number of roads and interval settings were set, named as &quot;QueueThread&quot;. Make sure, that it was created properly, didn't terminate immediately and was not misspelled&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Welcome to the traffic management system!&#10;Input the number of roads:&gt; 1&#10;Input the interval:&gt; 1&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open System&#10;0. Quit" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #7
+  <testcase name="start" classname="GlobalTests" time="4.536">
+    <failure message="java.lang.AssertionError: Wrong answer in test #7&#10;&#10;Incorrect menu output in the following case: Pressed &quot;Enter&quot; to return from system mode. It should contain exactly 5 lines but there were 1 instead&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Welcome to the traffic management system!&#10;Input the number of roads:&gt; 1&#10;Input the interval:&gt; 1&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open System&#10;0. Quit&#10;&gt; 3&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open System&#10;0. Quit&#10;! 1s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;! Press &quot;Enter&quot; to open menu !&#10;! 2s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;! Press &quot;Enter&quot; to open menu !&#10;! 3s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;! Press &quot;Enter&quot; to open menu !&#10;! 4s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;! Press &quot;Enter&quot; to open menu !&#10;&gt; &#10;incorrect option. Please try again." type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #7
 
-There should be created new thread when number of roads and interval settings were set, named as &quot;QueueThread&quot;. Make sure, that it was created properly, didn't terminate immediately and was not misspelled
+Incorrect menu output in the following case: Pressed &quot;Enter&quot; to return from system mode. It should contain exactly 5 lines but there were 1 instead
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -19,6 +19,30 @@ Menu:
 2. Delete road
 3. Open System
 0. Quit
+&gt; 3
+Menu:
+1. Add road
+2. Delete road
+3. Open System
+0. Quit
+! 1s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press &quot;Enter&quot; to open menu !
+! 2s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press &quot;Enter&quot; to open menu !
+! 3s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press &quot;Enter&quot; to open menu !
+! 4s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press &quot;Enter&quot; to open menu !
+&gt; 
+incorrect option. Please try again.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:208)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -80,44 +104,8 @@ Menu:
 Bye!
 ?[1;31m
 Start test 2?[0m
-Welcome to the traffic management system!
-Input the number of roads:> 5
-Input the interval:> 3
-Menu:
-1. Add road
-2. Delete road
-3. Open System
-0. Quit
-> 1
-Road added
-> 
-Menu:
-1. Add road
-2. Delete road
-3. Open System
-0. Quit
-> 0
-Bye!
 ?[1;31m
 Start test 3?[0m
-Welcome to the traffic management system!
-Input the number of roads:> 5
-Input the interval:> 3
-Menu:
-1. Add road
-2. Delete road
-3. Open System
-0. Quit
-> 2
-Road deleted
-> 
-Menu:
-1. Add road
-2. Delete road
-3. Open System
-0. Quit
-> 0
-Bye!
 ?[1;31m
 Start test 4?[0m
 ?[1;31m
@@ -163,7 +151,7 @@ Menu:
 3. Open System
 0. Quit
 > asd
-incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -171,7 +159,7 @@ Menu:
 3. Open System
 0. Quit
 > -1
-Incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -179,7 +167,7 @@ Menu:
 3. Open System
 0. Quit
 > 6-
-incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -187,7 +175,7 @@ Menu:
 3. Open System
 0. Quit
 > Hello world!
-incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -195,7 +183,7 @@ Menu:
 3. Open System
 0. Quit
 > 4
-Incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -203,7 +191,7 @@ Menu:
 3. Open System
 0. Quit
 > 5
-Incorrect option
+incorrect option. Please try again.
 > 
 Menu:
 1. Add road
@@ -222,6 +210,30 @@ Menu:
 2. Delete road
 3. Open System
 0. Quit
+> 3
+Menu:
+1. Add road
+2. Delete road
+3. Open System
+0. Quit
+! 1s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press "Enter" to open menu !
+! 2s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press "Enter" to open menu !
+! 3s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press "Enter" to open menu !
+! 4s. have passed since system startup !
+! Number of roads: 1 !
+! Interval: 1 !
+! Press "Enter" to open menu !
+> 
+incorrect option. Please try again.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

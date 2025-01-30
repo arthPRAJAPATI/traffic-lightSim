@@ -7,7 +7,7 @@ public class Main {
   static Scanner sc = new Scanner(System.in);
   static String roads = null;
   static String interval = null;
-  static int globalOptions = 0;
+  static volatile int globalOptions = 0;
   public static void main(String[] args) throws IOException, InterruptedException {
     String Begin = """ 
             Welcome to the traffic management system!
@@ -19,8 +19,9 @@ public class Main {
     clearConsole();
 
     Thread thread = new QueueThread();
-    thread.start();
     thread.setName("QueueThread");
+    thread.start();
+
 
     String menu = """
             Menu:
@@ -51,12 +52,10 @@ public class Main {
           toContinue = false;
           break;
         case 1:
-          System.out.println("Road added");
-//          roads++;
+          globalOptions = 1;
           break;
         case 2:
-          System.out.println("Road deleted");
-//          roads--;
+          globalOptions = 2;
           break;
         case 3:
           globalOptions = 3;
@@ -69,6 +68,7 @@ public class Main {
       if(toContinue) {
         try {
           System.in.read();
+          globalOptions = 0;
         } catch (IOException e) {
           throw new RuntimeException(e);
         }
@@ -76,7 +76,7 @@ public class Main {
       }
 
     } while(toContinue);
-
+  thread.stop();
   }
 
   public static void getRoads() {
